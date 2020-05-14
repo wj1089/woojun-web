@@ -15,7 +15,6 @@ public class PlayerController {
     @Autowired PlayerService playerService;
     @GetMapping("")
     public List<PlayerDto> getList(){
-        //
         return playerService.retrieveAll();
     }
 }

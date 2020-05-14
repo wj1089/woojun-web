@@ -5,14 +5,10 @@
 <mapper namespace="com.occamsrazor.web.mappers.PlayerMapper">
 <select id="selectAll" resultType="com.occamsrazor.web.domains.PlayerDto">
     select
-        player_id playerId,
-        player_name playerName,
-        e_player_name ePlayerName,
-        nickname,
-        join_yyyy joinYyyy,
-        position,
-        back_no backNo, nation,
-        birth_date birthDate, solar, height, weight, team_id teamId
-        from player
+        player_id playerId, player_name playerName, e_player_name ePlayerName,
+        nickname, join_yyyy joinYyyy, position,
+        back_no backNo, nation, birth_date birthDate,
+        solar, height, weight, team_id teamId
+    from player
 </select>
 </mapper>
