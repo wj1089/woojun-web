@@ -2,6 +2,8 @@
     <div id="wrapper">
         <header>
             <slot name="header" v-bind:title="header"></slot>
+            <slot name="login" v-bind:title="login"></slot>
+            <slot name="signin" v-bind:title="signin"></slot>
         </header>
         <aside id="sidebar">
 
@@ -20,7 +22,9 @@
         name: "Layout",
         data: ()=>{
             return {
-                header : "헤더"
+                header : "헤더",
+                login : "로그인",
+                signin : "회원가입"
             }
         }
     }

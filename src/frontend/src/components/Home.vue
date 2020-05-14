@@ -3,8 +3,8 @@
         <layout>
             <template #header="header">
                 <h1>{{header.title}}</h1>
-                <h3>로그인</h3>
-                <h3>회원가입</h3>
+                <h3>{{header.login}}</h3>
+                <h3>{{header.sigin}}</h3>
             </template>
         </layout>
     </div>
