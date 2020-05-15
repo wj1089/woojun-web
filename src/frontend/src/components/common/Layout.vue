@@ -1,18 +1,22 @@
 <template>
     <div id="wrapper">
         <header>
-            <slot name="header" v-bind:title="header"></slot>
-            <slot name="login" v-bind:title="login"></slot>
-            <slot name="signin" v-bind:title="signin"></slot>
+            <slot name="header"
+                  :title="title"
+                  :login="login"
+                  :join="join"></slot>
         </header>
         <aside id="sidebar">
-
+            <slot name="sidebar"></slot>
         </aside>
         <section id="content">
+            <slot name="content">
 
+
+            </slot>
         </section>
         <footer>
-
+            <slot name="footer" :footer="footer"></slot>
         </footer>
     </div>
 </template>
@@ -20,11 +24,12 @@
 <script>
     export default {
         name: "Layout",
-        data: ()=>{
+        data(){
             return {
-                header : "헤더",
-                login : "로그인",
-                signin : "회원가입"
+            title:'축구정보시스템',
+            login:'로그인',
+            join:'회원가입',
+            footer:'(사)축구선수협회'
             }
         }
     }
